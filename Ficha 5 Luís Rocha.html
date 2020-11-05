@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<h1><center> Tabuada - Ficha 5 </center></h1>
+<form name="calculos">
+
+<center> Nome: <input type="text" name="name" size="15">
+<br>
+<br>
+Tabuada do Nº: <input type="text" id="num" size="6">
+<br>
+<br>
+<input type="button" value="Calcular" onclick="calcular();"> <input type="reset" value="Limpar">
+<br>
+<br>
+<br>
+</center>
+<div id="resposta" style='display:inline'> </div>
+</form>
+
+
+
+<script type="text/javascript">
+
+ function calcular()
+ { 
+                var n = new Number(document.calculos.num.value);
+                var tabuada="<table align=center>";
+               for (i = 1; i <= n; i++)
+               {
+                     var p = n*i;
+              tabuada = tabuada + "<tr><td>" + n + " x " + i + " = " + p;
+               }
+              tabuada = tabuada + "</table>";
+              document.getElementById("resposta").innerHTML = tabuada;
+ }
+
+
+</script>
+</body>
+</html>
